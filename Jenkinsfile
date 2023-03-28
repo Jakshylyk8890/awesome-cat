@@ -35,12 +35,14 @@ pipeline {
       }           
     }
     }
-	post{
-    always {  
-      sh 'docker logout'           
-    }      
-  }  
-	emailext body: 'Test Message',
-        subject: 'Test Subject',
-        to: 'jakshylyk.ashyrmamatov@gmail.com
+	 post {
+        always {
+            emailext (
+                subject: 'Build Notification',
+                body: 'The build is complete.',
+                to: 'jakshylyk.ashyrmamatov@gmail.com',
+         
+            )
+        }
+    }
 }
