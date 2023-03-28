@@ -41,6 +41,7 @@ pipeline {
     } 
        success {
             emailext body: 'Sended by Jakshylyk', 
+		    recipients: jakshylyk.ashyrmamatov@gmail.com
 // 		    recipientProviders: [[$class: 'DevelopersRecipientProvider'],
 // 					 [$class: 'RequesterRecipientProvider']], 
 		    subject: 'It is sended via Jenkins'
