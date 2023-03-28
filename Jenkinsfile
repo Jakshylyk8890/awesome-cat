@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage("test") {
             steps{
-                sh 'docker build -t user8890/jenkins-cat-frontend awesome-cats_frontend'
+                sh 'docker build -t user8890/jenkins-cat-frontend awesome_cats_frontend'
             }
         }
     }
