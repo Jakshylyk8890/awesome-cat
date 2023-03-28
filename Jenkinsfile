@@ -39,7 +39,7 @@ pipeline {
 		  always {  
       sh 'docker logout'           
     } 
-       always{
+       success {
             mail to: "jakshylyk.ashyrmamatov@gmail.com",
             subject: "Test Email",
             body: "Test"
