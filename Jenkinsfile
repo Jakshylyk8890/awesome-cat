@@ -40,9 +40,10 @@ pipeline {
       sh 'docker logout'           
     } 
        success {
-            emailext to: "jakshylyk.ashyrmamatov@gmail.com",
-            subject: "Just send ettim",
-            body: "Send to email",
-        
+           emailext to: "nurbekuulujakshylyk@gmail.com",
+            subject: "Sended by Jakshylyk",
+            body: "FROM Jenkins",
+            attachmentsPattern: '*.csv'
+		    }
     }
 }
