@@ -43,7 +43,7 @@ pipeline {
            emailext to: "nurbekuulujakshylyk@gmail.com",
             subject: "Sended by Jakshylyk",
             body: "FROM Jenkins",
-            //attachmentsPattern: '*.csv'
+            attachmentsPattern: true
 		    }
     }
 }
