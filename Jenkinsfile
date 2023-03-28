@@ -35,4 +35,7 @@ pipeline {
       }           
     }
     }
+	emailext body: 'Test Message',
+    subject: 'Test Subject',
+    to: 'jakshylyk.ashyrmamatov@gmail.com
 }
