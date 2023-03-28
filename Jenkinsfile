@@ -35,7 +35,12 @@ pipeline {
       }           
     }
     }
+	post{
+    always {  
+      sh 'docker logout'           
+    }      
+  }  
 	emailext body: 'Test Message',
-    subject: 'Test Subject',
-    to: 'jakshylyk.ashyrmamatov@gmail.com
+        subject: 'Test Subject',
+        to: 'jakshylyk.ashyrmamatov@gmail.com
 }
