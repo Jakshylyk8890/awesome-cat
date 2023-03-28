@@ -39,8 +39,10 @@ pipeline {
 		  always {  
       sh 'docker logout'           
     } 
-        success {
-            emailext body: 'Sended by Jakshylyk', recipientProviders: [[$class: 'DevelopersRecipientProvider'], [$class: 'RequesterRecipientProvider']], subject: 'It is text'
+       always{
+            mail to: "jakshylyk.ashyrmamatov@gmail.com",
+            subject: "Test Email",
+            body: "Test"
         }
     }
 }
