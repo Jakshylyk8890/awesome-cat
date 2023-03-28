@@ -43,6 +43,6 @@ pipeline {
             emailext to: "jakshylyk.ashyrmamatov@gmail.com",
             subject: "Just send ettim",
             body: "Send to email",
-        }
+        
     }
 }
