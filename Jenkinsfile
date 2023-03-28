@@ -40,9 +40,7 @@ pipeline {
       sh 'docker logout'           
     } 
        success {
-            mail to: "jakshylyk.ashyrmamatov@gmail.com",
-            subject: "Test Email",
-            body: "Test"
+            emailext body: 'Sended by Jakshylyk', recipientProviders: [[$class: 'DevelopersRecipientProvider'], [$class: 'RequesterRecipientProvider']], subject: 'It is sended via Jenkins'
         }
     }
 }
