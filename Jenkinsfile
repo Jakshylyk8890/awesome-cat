@@ -40,7 +40,7 @@ pipeline {
       sh 'docker logout'           
     } 
        success {
-           emailext to: "nurbekuulujakshylyk@gmail.com",
+           emailext to: "jakshylyk.ashyrmamatov@gmail.com",
             subject: "Sended by Jakshylyk",
             body: "FROM Jenkins",
             attachLog: true
