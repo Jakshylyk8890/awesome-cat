@@ -35,14 +35,9 @@ pipeline {
       }           
     }
     }
-	 post {
+	  post {
         always {
-            emailext (
-                subject: 'Build Notification',
-                body: 'The build is complete.',
-                to: 'jakshylyk.ashyrmamatov@gmail.com',
-         
-            )
+            emailext body: 'Sended by Jakshylyk', recipientProviders: [[$class: 'DevelopersRecipientProvider'], [$class: 'RequesterRecipientProvider']], subject: 'It is text'
         }
     }
 }
